@@ -35,7 +35,8 @@ const Card = () => {
     "date": currentDate,
     "explanation": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit possimus pariatur excepturi facilis necessitatibus, aut cumque perspiciatis corporis aliquam officia ipsum repellat neque maiores libero dicta sapiente sunt totam similique.",
     "url": "https://www.youtube.com/embed/7dh5VL5YGoA",
-    "title": "Fake title"
+    "title": "Fake title",
+    "media_type": "video"
   }
 
 
@@ -46,10 +47,16 @@ const Card = () => {
 
   return (
     <div>
-      <h2>{dummyData.title}</h2>
-      <p>{dummyData.date}</p>
-      <Picture url={dummyData.url} />
-      <p className="starExplanation">{dummyData.explanation}</p>
+      <p>
+        {dummyData.date}
+      </p>
+      <Picture url={dummyData.url} media_type={dummyData.media_type}/>
+      <h4>
+        {dummyData.title}
+      </h4>
+      <p className="starExplanation">
+        <strong>Explanation: </strong>{dummyData.explanation}
+      </p>
     </div>
   )
 }
