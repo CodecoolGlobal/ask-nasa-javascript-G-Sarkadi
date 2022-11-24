@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react"
 import "./cards.css"
+import Picture from "./Picture";
 
 const Card = () => {
     // const [title, setTitle] = useState()
     // const [date, setDate] = useState()
     // const [url, setUrl] = useState()
     // const [explanation, setExplanation] = useState()
-    const [data,setData] = useState(null);
+    const [data,setData] = useState();
 
-    const date = new Date();
-    let currentDate = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+    const newDate = new Date();
+    let currentDate = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()}`;
+    let date = currentDate;
     
-    const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&date=2022-11-01`;
+    const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&date=${date}`;
 
   //   useEffect(() => {
   //     const controller = new AbortController();
@@ -33,13 +35,15 @@ const Card = () => {
   const dummyData = {
     "date": "2022-02-02",
     "explanation": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit possimus pariatur excepturi facilis necessitatibus, aut cumque perspiciatis corporis aliquam officia ipsum repellat neque maiores libero dicta sapiente sunt totam similique.",
-    "url": "https://apod.nasa.gov/apod/image/2211/LDN1251v7social1024.png",
+    "url": "https://www.youtube.com/embed/7dh5VL5YGoA",
     "title": "Fake title"
   }
+  
 
-
-  console.log(data)
-
+  // console.log(data)
+  
+  // console.log(dummyData)
+  
 
   return (
     <div>
@@ -47,7 +51,7 @@ const Card = () => {
         {dummyData.title}
       </h2>
       <p>{dummyData.date}</p>
-      <img src={dummyData.url} alt="nice stars" className="starPicture"/>
+      <Picture url={dummyData.url}/>
       <p className="starExplanation">{dummyData.explanation}</p>
     </div>
   )
