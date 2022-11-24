@@ -42,7 +42,7 @@ const Card = ({ date }) => {
   }
 
   return (
-    <div>
+    <div className="card">
       <p>
         {formatDate(data)}
       </p>

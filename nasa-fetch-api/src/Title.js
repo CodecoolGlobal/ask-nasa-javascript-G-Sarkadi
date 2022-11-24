@@ -2,7 +2,7 @@
 const Title = () => {
 
   return (
-    <h1>Astronomy Picture of the Day</h1>
+    <h1>Astronomy Picture of the Day (by NASA)</h1>
   )
 }
 
