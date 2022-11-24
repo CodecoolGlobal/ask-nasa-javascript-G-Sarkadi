@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Picture from "./Picture";
 
 const Card = ({ date }) => {
-  const [data, setData] = useState({});
+  const [starData, setStarData] = useState({});
 
   const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&date=${date}`;
 
@@ -14,7 +14,7 @@ const Card = ({ date }) => {
       signal: signal
     })
       .then((res) => res.json())
-      .then(res => setData(res));
+      .then(res => setStarData(res));
 
     return () => {
       // cancel the request before component unmounts
@@ -22,17 +22,8 @@ const Card = ({ date }) => {
     };
   }, [URL]);
 
-
-  const dummyData = {
-    "date": date,
-    "explanation": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit possimus pariatur excepturi facilis necessitatibus, aut cumque perspiciatis corporis aliquam officia ipsum repellat neque maiores libero dicta sapiente sunt totam similique.",
-    "url": "https://apod.nasa.gov/apod/image/2211/LDN1251v7social1024.png",
-    "title": "Fake title",
-    "media_type": "image"
-  }
-
-  function formatDate(data) {
-    let dateObject = new Date(data.date + "z");
+  function formatDate(date) {
+    let dateObject = new Date(date + "z");
     let options = {
       year: "numeric",
       month: "long",
@@ -44,17 +35,17 @@ const Card = ({ date }) => {
   return (
     <div className="card">
       <p>
-        {formatDate(data)}
+        {formatDate(date)}
       </p>
-      <Picture url={data.url} media_type={data.media_type} />
+      <Picture url={starData.url} media_type={starData.media_type} title={starData.title} />
       <h4>
-        {data.title}
+        {starData.title}
       </h4>
       <h5>
-        Image Credit & Copyright: {data.copyright}
+        Image Credit & Copyright: {starData.copyright}
       </h5>
       <p className="starExplanation">
-        <strong>Explanation: </strong>{data.explanation}
+        <strong>Explanation: </strong>{starData.explanation}
       </p>
     </div>
   )

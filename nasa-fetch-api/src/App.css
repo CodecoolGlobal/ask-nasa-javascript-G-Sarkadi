@@ -11,6 +11,11 @@ body {
     width: 60%;
 }
 
+.starVideo {
+    width: 960px;
+    height: 540px;
+}
+
 .starExplanation {
     padding: 0 10%;
 }
