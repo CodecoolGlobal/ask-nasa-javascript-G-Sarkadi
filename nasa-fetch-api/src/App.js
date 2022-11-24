@@ -5,8 +5,10 @@ import Card from './Card';
 function App() {
   return (
     <>
-      <Title />
-      <Card />
+      <div className="container">
+        <Title />
+        <Card />
+      </div>
     </>
   );
 }
