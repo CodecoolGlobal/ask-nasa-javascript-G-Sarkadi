@@ -1,12 +1,12 @@
 
-const Picture = ({ url, media_type, title }) => {
+const Picture = ({ starData }) => {
 
     function checkUrl() {
-        if (media_type === "video") {
-            return <iframe src={url} title={title} className="starVideo"></iframe>
+        if (starData.media_type === "video") {
+            return <iframe src={starData.url} title={starData.title} className="starVideo"></iframe>
         }
-        if (media_type === "image") {
-            return <img src={url} alt={title} className="starPicture" />
+        if (starData.media_type === "image") {
+            return <img src={starData.url} alt={starData.title} className="starPicture" />
         }
     };
 

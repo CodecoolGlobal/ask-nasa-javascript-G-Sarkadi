@@ -11,7 +11,7 @@ function App() {
     return `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()}`;
   }
 
-  let today = calculateToday();
+  const today = calculateToday();
 
   return (
     <>

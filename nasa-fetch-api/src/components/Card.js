@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
+import Credits from "./Credits";
 import Picture from "./Picture";
 
 const Card = ({ date }) => {
   const [starData, setStarData] = useState({});
 
   const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&date=${date}`;
-
+  
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
@@ -37,13 +38,11 @@ const Card = ({ date }) => {
       <p>
         {formatDate(date)}
       </p>
-      <Picture url={starData.url} media_type={starData.media_type} title={starData.title} />
+      <Picture starData={starData} />
       <h4>
         {starData.title}
       </h4>
-      <h5>
-        Image Credit & Copyright: {starData.copyright}
-      </h5>
+      <Credits starData={starData} />
       <p className="starExplanation">
         <strong>Explanation: </strong>{starData.explanation}
       </p>
