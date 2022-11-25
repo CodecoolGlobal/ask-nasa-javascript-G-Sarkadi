@@ -1,7 +1,8 @@
 import Card from "./Card"
 import DateInput from "./DateInput"
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import NavButton from "./NavButton";
+import Footer from "./Footer";
 
 const Home = () => {
     const [selectedDate, setSelectedDate] = useState("");
@@ -20,10 +21,9 @@ const Home = () => {
                 <h1>Astronomy Picture of the Day</h1>
                 <DateInput selectedDate={selectedDate} today={today} setSelectedDate={setSelectedDate} />
                 <Card date={selectedDate === "" ? today : selectedDate} />
+                <NavButton text={"Go to Gallery"} route="/gallery"/>
             </div>
-            <footer>
-                © 2022 NASA | Sarkadi Gergely
-            </footer>
+            <Footer />
         </>
     )
 }

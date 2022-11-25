@@ -25,3 +25,13 @@ footer{
     font-style: italic;
     font-size: smaller;
 }
+
+.navButton {
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    border-radius: 25px;
+    border-width: 0;
+    color: #F4F4FF;
+    cursor: pointer;
+}
