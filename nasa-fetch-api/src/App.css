@@ -27,13 +27,15 @@ footer {
 }
 
 .navButton {
-    width: 100px;
+    min-width: 100px;
     height: 40px;
     background-color: blue;
     border-radius: 25px;
     border-width: 0;
     color: #F4F4FF;
     cursor: pointer;
+    padding: 10px;
+    font-weight: bold;
 }
 
 .galleryContainer {

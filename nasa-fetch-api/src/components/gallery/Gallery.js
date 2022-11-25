@@ -31,7 +31,7 @@ const Gallery = () => {
             <div className="container">
                 <h1>Gallery</h1>
                 {cards ? <GalleryContainer galleryContent={cards} /> : <LoadingPlaceholder />}
-                <NavButton text="Go to Home" route="/" />
+                <NavButton text="Go to Main Page" route="/" />
             </div>
             <Footer />
         </>
