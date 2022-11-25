@@ -1,4 +1,4 @@
-import LoadingPlaceholder from "./LoadingPlaceholder"
+import LoadingPlaceholder from "../LoadingPlaceholder"
 
 const Picture = ({ starData }) => {
 

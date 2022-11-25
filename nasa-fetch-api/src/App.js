@@ -1,7 +1,7 @@
 import './App.css';
-import Home from './components/Home';
+import Home from './components/main/Home';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Gallery from './components/Gallery';
+import Gallery from './components/gallery/Gallery';
 
 function App() {
   return (

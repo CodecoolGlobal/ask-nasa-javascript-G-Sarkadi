@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
-import Footer from "./Footer"
+import Footer from "../Footer"
 import GalleryContainer from "./GalleryContainer"
-import LoadingPlaceholder from "./LoadingPlaceholder"
-import NavButton from "./NavButton"
+import LoadingPlaceholder from "../LoadingPlaceholder"
+import NavButton from "../NavButton"
 
 const Gallery = () => {
     const [cards, setCards] = useState();
