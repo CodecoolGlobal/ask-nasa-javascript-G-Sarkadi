@@ -1,9 +1,11 @@
 import GalleryCard from "./GalleryCard"
 
-const GalleryContainer = ({galleryContent}) => {
+const GalleryContainer = ({ galleryContent }) => {
 
     function createCards() {
-        return galleryContent.map((c, index) => <GalleryCard content={c} key={index}/>)
+        if (galleryContent) {
+            return galleryContent.map((c, index) => <GalleryCard content={c} key={index} />)
+        }
     }
 
 
