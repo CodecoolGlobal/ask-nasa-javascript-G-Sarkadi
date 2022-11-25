@@ -21,7 +21,7 @@ function Modal({ setOpenModal, modalContent }) {
                     <div className="picture">
                         <img src={modalContent.url} alt={modalContent.title} width="700px" />
                     </div>
-                    <p>{modalContent.explanation}</p>
+                    <p className="explanation">{modalContent.explanation}</p>
                 </div>
                 <div className="footer">
                     <button
