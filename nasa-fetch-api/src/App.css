@@ -35,3 +35,8 @@ footer{
     color: #F4F4FF;
     cursor: pointer;
 }
+
+.galleryContainer {
+    display: grid;
+    
+}
