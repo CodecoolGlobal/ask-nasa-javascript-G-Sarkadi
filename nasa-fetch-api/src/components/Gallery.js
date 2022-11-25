@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import Footer from "./Footer"
 import GalleryContainer from "./GalleryContainer"
+import LoadingPlaceholder from "./LoadingPlaceholder"
 import NavButton from "./NavButton"
 
 const Gallery = () => {
@@ -29,7 +30,7 @@ const Gallery = () => {
         <>
             <div className="container">
                 <h1>Gallery</h1>
-                {cards ? <GalleryContainer galleryContent={cards} /> : <div>Loading....</div>}
+                {cards ? <GalleryContainer galleryContent={cards} /> : <LoadingPlaceholder />}
                 <NavButton text="Go to Home" route="/" />
             </div>
             <Footer />

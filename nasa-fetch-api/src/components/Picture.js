@@ -1,3 +1,4 @@
+import LoadingPlaceholder from "./LoadingPlaceholder"
 
 const Picture = ({ starData }) => {
 
@@ -8,6 +9,7 @@ const Picture = ({ starData }) => {
         if (starData.media_type === "image") {
             return <img src={starData.url} alt={starData.title} className="starPicture" />
         }
+        return <LoadingPlaceholder />
     };
 
     return (
