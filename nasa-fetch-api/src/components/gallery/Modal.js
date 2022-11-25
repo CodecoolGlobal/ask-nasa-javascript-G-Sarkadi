@@ -1,5 +1,5 @@
 import React from "react";
-import FormatedDate from "../../FormatedDate";
+import FormatedDate from "../FormatedDate";
 import "./Modal.css";
 
 function Modal({ setOpenModal, modalContent }) {
