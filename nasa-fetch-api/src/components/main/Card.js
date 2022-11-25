@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import FormatedDate from "../../FormatedDate";
 import Credits from "./Credits";
 import Picture from "./Picture";
 
@@ -23,20 +24,11 @@ const Card = ({ date }) => {
     };
   }, [URL]);
 
-  function formatDate(date) {
-    let dateObject = new Date(date + "z");
-    let options = {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }
-    return dateObject.toLocaleDateString("hu", options)
-  }
 
   return (
     <div className="card">
       <p>
-        {formatDate(date)}
+        <FormatedDate date={date}/>
       </p>
       <Picture starData={starData} />
       <h4>

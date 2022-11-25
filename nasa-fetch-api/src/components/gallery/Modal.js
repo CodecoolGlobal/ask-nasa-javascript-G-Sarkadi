@@ -1,4 +1,5 @@
 import React from "react";
+import FormatedDate from "../../FormatedDate";
 import "./Modal.css";
 
 function Modal({ setOpenModal, modalContent }) {
@@ -15,7 +16,12 @@ function Modal({ setOpenModal, modalContent }) {
                     </button>
                 </div>
                 <div className="title">
-                    <h2>{modalContent.title}</h2>
+                    <h2>
+                        {modalContent.title}
+                    </h2>
+                    <p>
+                        <FormatedDate date={modalContent.date} />
+                    </p>
                 </div>
                 <div className="body">
                     <div className="picture">
