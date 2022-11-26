@@ -72,4 +72,10 @@
     max-height: 550px;
     max-width: 1500px;
     object-fit: contain;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.starPicture:hover {
+    cursor: pointer;
+    border: 1px solid #777;
 }
