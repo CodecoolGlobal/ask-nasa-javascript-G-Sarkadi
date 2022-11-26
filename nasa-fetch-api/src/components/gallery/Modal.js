@@ -2,9 +2,10 @@ import React from "react";
 import FormatedDate from "../FormatedDate";
 import "./Modal.css";
 import Picture from "../Picture";
+import ReactDom from 'react-dom'
 
 function Modal({ setOpenModal, modalContent }) {
-    return (
+    return ReactDom.createPortal(
         <div className="modalBackground">
             <div className="modalContainer">
                 <div className="titleCloseBtn">
@@ -39,7 +40,8 @@ function Modal({ setOpenModal, modalContent }) {
                     </button>
                 </div>
             </div>
-        </div>
+        </div>,
+    document.getElementById("portal")
     );
 }
 
