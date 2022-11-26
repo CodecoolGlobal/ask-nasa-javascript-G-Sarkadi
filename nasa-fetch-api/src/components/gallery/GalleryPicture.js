@@ -1,7 +1,7 @@
-const GalleryPicture = ({ starData }) => {
+const GalleryPicture = ({ content }) => {
 
     return (
-        <img className="galleryCard" src={starData.thumbnail_url ?? starData.url} alt={starData.title} />
+        <img className="galleryCard" src={content.thumbnail_url ?? content.url} alt={content.title} />
     )
 }
 

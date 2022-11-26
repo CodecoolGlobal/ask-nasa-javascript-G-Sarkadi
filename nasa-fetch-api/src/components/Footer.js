@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <footer>
-            © 2022 NASA | Sarkadi Gergely
+            © {new Date().getFullYear()} NASA | Sarkadi Gergely
         </footer>
     )
 }

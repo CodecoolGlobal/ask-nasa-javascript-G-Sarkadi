@@ -9,7 +9,7 @@ const GalleryCard = ({ content, setModalOpen, setModalContent }) => {
                 setModalContent(content)
             }}
             style={{ border: 0 }}>
-            <GalleryPicture starData={content}/>
+            <GalleryPicture content={content}/>
         </button>
     )
 }
