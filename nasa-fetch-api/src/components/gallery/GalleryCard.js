@@ -1,3 +1,4 @@
+import GalleryPicture from "./GalleryPicture";
 
 const GalleryCard = ({ content, setModalOpen, setModalContent }) => {
 
@@ -8,7 +9,7 @@ const GalleryCard = ({ content, setModalOpen, setModalContent }) => {
                 setModalContent(content)
             }}
             style={{ border: 0 }}>
-            <img className="galleryCard" src={content.url} alt={content.title} width="350"></img>
+            <GalleryPicture starData={content}/>
         </button>
     )
 }

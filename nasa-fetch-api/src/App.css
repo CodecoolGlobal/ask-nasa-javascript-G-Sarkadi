@@ -52,6 +52,10 @@ footer {
     align-items: center;
 }
 
+.galleryCard {
+    width: 350px;
+}
+
 .galleryCard:hover {
     cursor: pointer;
 }
