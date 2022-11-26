@@ -11,9 +11,9 @@
 
 .modalContainer {
     max-width: 95%;
-    max-height: 90%;
+    max-height: 95%;
     border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
