@@ -1,7 +1,7 @@
 import React from "react";
 import FormatedDate from "../FormatedDate";
 import "./Modal.css";
-import Picture from "../Picture";
+import Picture from "../main/Picture";
 import ReactDom from 'react-dom'
 
 function Modal({ setOpenModal, modalContent }) {

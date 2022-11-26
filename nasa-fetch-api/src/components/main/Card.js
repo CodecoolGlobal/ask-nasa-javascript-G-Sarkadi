@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import FormatedDate from "../FormatedDate";
 import Credits from "./Credits";
-import Picture from "../Picture";
+import Picture from "./Picture";
 
 const Card = ({ date }) => {
   const [starData, setStarData] = useState({});
@@ -12,6 +12,7 @@ const Card = ({ date }) => {
     const controller = new AbortController();
     const signal = controller.signal;
 
+    setStarData({})
     fetch(URL, {
       signal: signal
     })
