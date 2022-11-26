@@ -7,8 +7,9 @@ body {
     min-height: calc(100vh - 45px);
 }
 
-.starPicture {
-    width: 60%;
+
+.starPicture:hover {
+    cursor: pointer;
 }
 
 .starVideo {
