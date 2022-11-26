@@ -10,6 +10,7 @@ body {
 .starPicture {
     max-height: 50vh;
     max-width: 80vw;
+    border-radius: 15px;
     object-fit: contain;
     border: 1px solid rgba(0,0,0,0);
 }
@@ -17,6 +18,11 @@ body {
 .starPicture:hover {
     cursor: pointer;
     border: 1px solid #777;
+}
+
+.starPictureButton, .galleryPictureButton {
+    border: 0;
+    background-color: rgba(0,0,0,0);
 }
 
 .starVideo {
@@ -63,6 +69,7 @@ footer {
 .galleryCard {
     width: 350px;
     border: 1px solid rgba(0,0,0,0);
+    border-radius: 15px;
 }
 
 .galleryCard:hover {

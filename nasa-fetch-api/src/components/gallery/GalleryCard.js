@@ -3,12 +3,12 @@ import GalleryPicture from "./GalleryPicture";
 const GalleryCard = ({ content, setModalOpen, setModalContent }) => {
 
     return (
-        <button
+        <button className="galleryPictureButton"
             onClick={() => {
                 setModalOpen(true);
                 setModalContent(content)
             }}
-            style={{ border: 0 }}>
+            >
             <GalleryPicture content={content}/>
         </button>
     )
