@@ -1,6 +1,7 @@
 import React from "react";
 import FormatedDate from "../FormatedDate";
 import "./Modal.css";
+import Picture from "../Picture";
 
 function Modal({ setOpenModal, modalContent }) {
     return (
@@ -24,9 +25,7 @@ function Modal({ setOpenModal, modalContent }) {
                     </p>
                 </div>
                 <div className="body">
-                    <div className="picture">
-                        <img src={modalContent.url} alt={modalContent.title} width="700px" />
-                    </div>
+                    <Picture starData={modalContent}/>
                     <p className="explanation">{modalContent.explanation}</p>
                 </div>
                 <div className="footer">

@@ -67,3 +67,9 @@
 #cancelBtn {
     background-color: crimson;
 }
+
+.starPicture{
+    max-height: 550px;
+    max-width: 1500px;
+    object-fit: contain;
+}
