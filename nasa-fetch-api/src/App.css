@@ -7,9 +7,16 @@ body {
     min-height: calc(100vh - 45px);
 }
 
+.starPicture {
+    max-height: 50vh;
+    max-width: 80vw;
+    object-fit: contain;
+    border: 1px solid rgba(0,0,0,0);
+}
 
 .starPicture:hover {
     cursor: pointer;
+    border: 1px solid #777;
 }
 
 .starVideo {
