@@ -1,7 +1,7 @@
 .modalBackground {
     width: 100vw;
     height: 100vh;
-    margin-top: -20px;
+    top: 0;
     background-color: rgba(200, 200, 200, 0.5);
     position: fixed;
     display: flex;
@@ -13,7 +13,7 @@
     max-width: 90%;
     max-height: 90%;
     border-radius: 12px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255, 255, 255, 0.8);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
@@ -68,7 +68,7 @@
     background-color: crimson;
 }
 
-.starPicture{
+.starPicture {
     max-height: 550px;
     max-width: 1500px;
     object-fit: contain;
