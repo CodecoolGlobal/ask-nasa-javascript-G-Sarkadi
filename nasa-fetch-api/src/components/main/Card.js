@@ -6,13 +6,17 @@ import Picture from "../Picture";
 const Card = ({ date }) => {
   const [starData, setStarData] = useState({});
 
-  const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&date=${date}`;
+  // TODO This is very cheesy, should be an easier way to point to the backend
+  let backendURL = `${window.location.protocol}//${window.location.hostname}:5000/`
+
+  const URL = `${backendURL}api?date=${date}`
   
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
 
     setStarData({})
+
     async function fetchData() {
       const res = await fetch(URL, {signal:signal})
       const  data = await res.json()

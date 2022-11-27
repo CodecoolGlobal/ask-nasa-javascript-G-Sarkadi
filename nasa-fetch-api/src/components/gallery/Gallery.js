@@ -11,14 +11,21 @@ const Gallery = () => {
     const [modalContent, setModalContent] = useState({});
 
     const numberOfCards = 20;
-    const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY}&count=${numberOfCards}&thumbs=true`;
+    // const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY_VALUE}&count=${numberOfCards}&thumbs=true`;
+
+    // TODO This is very cheesy, should be an easier way to point to the backend
+    let backendURL = `${window.location.protocol}//${window.location.hostname}:5000/`
+
+    const URL = `${backendURL}api?count=${numberOfCards}&thumbs=true`
+
 
     useEffect(() => {
         const controller = new AbortController();
         const signal = controller.signal;
 
         async function fetchData() {
-            const res = await fetch(URL, {signal:signal})
+            console.log(URL)
+            const res = await fetch(URL, { signal: signal })
             const data = await res.json()
             setCards(data)
         }
