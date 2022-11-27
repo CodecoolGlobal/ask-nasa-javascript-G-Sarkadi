@@ -13,11 +13,13 @@ const Card = ({ date }) => {
     const signal = controller.signal;
 
     setStarData({})
-    fetch(URL, {
-      signal: signal
-    })
-      .then((res) => res.json())
-      .then(res => setStarData(res));
+    async function fetchData() {
+      const res = await fetch(URL, {signal:signal})
+      const  data = await res.json()
+      setStarData(data)
+    }
+    
+    fetchData();
 
     return () => {
       // cancel the request before component unmounts
