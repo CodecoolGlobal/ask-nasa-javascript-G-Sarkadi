@@ -31,7 +31,7 @@ const Card = ({ date }) => {
       <p>
         <FormatedDate date={date}/>
       </p>
-      <Picture starData={starData} />
+      <Picture starData={starData} className={"mainPicture"}/>
       <h4>
         {starData.title}
       </h4>

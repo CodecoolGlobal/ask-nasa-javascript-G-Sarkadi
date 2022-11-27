@@ -26,7 +26,7 @@ function Modal({ setOpenModal, modalContent }) {
                     </p>
                 </div>
                 <div className="body">
-                    <Picture starData={modalContent}/>
+                    <Picture starData={modalContent} className={"starPicture"}/>
                     <p className="explanation">{modalContent.explanation}</p>
                 </div>
                 <div className="footer">

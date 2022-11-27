@@ -20,6 +20,18 @@ body {
     border: 1px solid #777;
 }
 
+.mainPicture {
+    max-height: 75vh;
+    border-radius: 10px;
+    object-fit: contain;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.mainPicture:hover {
+    cursor: pointer;
+    border: 1px solid #777;
+}
+
 .starPictureButton, .galleryPictureButton {
     border: 0;
     background-color: rgba(0,0,0,0);

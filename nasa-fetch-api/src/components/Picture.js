@@ -1,6 +1,6 @@
 import LoadingPlaceholder from "./LoadingPlaceholder"
 
-const Picture = ({ starData }) => {
+const Picture = ({ starData,className }) => {
     const openInNewTab = url => {
         window.open(url, '_blank', 'noopener,noreferrer');
     };
@@ -11,7 +11,7 @@ const Picture = ({ starData }) => {
         }
         if (starData.media_type === "image") {
             return <button className="starPictureButton" onClick={() => openInNewTab(starData.hdurl ?? starData.url)}>
-                <img src={starData.url} alt={starData.title} className="starPicture" />
+                <img src={starData.url} alt={starData.title} className={className} />
             </button>
         }
         return <LoadingPlaceholder />
