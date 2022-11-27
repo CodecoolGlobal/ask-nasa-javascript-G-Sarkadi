@@ -6,7 +6,7 @@ const GalleryCard = ({ content, setModalOpen, setModalContent }) => {
                 setModalOpen(true);
                 setModalContent(content)
             }}
-            >
+        >
             <img className="galleryCard" src={content.thumbnail_url || content.url} alt={content.title} />
         </button>
     )
