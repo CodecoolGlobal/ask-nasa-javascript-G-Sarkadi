@@ -19,7 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node index.js & react-scripts start",
     "backend-start": "node index",
     "backend-dev": "nodemon index",
     "build": "react-scripts build",
