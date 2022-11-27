@@ -11,7 +11,6 @@ const Gallery = () => {
     const [modalContent, setModalContent] = useState({});
 
     const numberOfCards = 20;
-    // const URL = `https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_NASA_API_KEY_VALUE}&count=${numberOfCards}&thumbs=true`;
 
     // TODO This is very cheesy, should be an easier way to point to the backend
     let backendURL = `${window.location.protocol}//${window.location.hostname}:5000/`
