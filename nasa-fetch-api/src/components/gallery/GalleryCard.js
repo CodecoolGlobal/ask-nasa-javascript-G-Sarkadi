@@ -1,5 +1,3 @@
-import GalleryPicture from "./GalleryPicture";
-
 const GalleryCard = ({ content, setModalOpen, setModalContent }) => {
 
     return (
@@ -9,7 +7,7 @@ const GalleryCard = ({ content, setModalOpen, setModalContent }) => {
                 setModalContent(content)
             }}
             >
-            <GalleryPicture content={content}/>
+            <img className="galleryCard" src={content.thumbnail_url || content.url} alt={content.title} />
         </button>
     )
 }

@@ -26,7 +26,7 @@ function Modal({ setOpenModal, modalContent }) {
                     </p>
                 </div>
                 <div className="body">
-                    <Picture starData={modalContent} className={"starPicture"}/>
+                    <Picture starData={modalContent} className={"starPicture"} />
                     <p className="explanation">{modalContent.explanation}</p>
                 </div>
                 <div className="footer">
@@ -41,7 +41,7 @@ function Modal({ setOpenModal, modalContent }) {
                 </div>
             </div>
         </div>,
-    document.getElementById("portal")
+        document.getElementById("portal")
     );
 }
 

@@ -7,7 +7,7 @@ const DateInput = ({ selectedDate, today, setSelectedDate }) => {
         <>
             <label>Select date: </label>
             <input type="date"
-                value={selectedDate || today}
+                value={selectedDate ?? today}
                 max={today}
                 min={earliestDate}
                 onChange={e => setSelectedDate(e.target.value)}>
