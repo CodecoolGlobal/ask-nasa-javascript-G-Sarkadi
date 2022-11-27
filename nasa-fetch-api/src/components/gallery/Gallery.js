@@ -23,7 +23,6 @@ const Gallery = () => {
         const signal = controller.signal;
 
         async function fetchData() {
-            console.log(URL)
             const res = await fetch(URL, { signal: signal })
             const data = await res.json()
             setCards(data)
