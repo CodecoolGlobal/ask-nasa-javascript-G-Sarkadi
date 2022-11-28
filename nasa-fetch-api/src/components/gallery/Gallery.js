@@ -36,6 +36,8 @@ const Gallery = () => {
         };
     }, [URL]);
 
+    document.title = 'Astronomy Picture of the Day'
+
     return (
         <>
             {modalOpen && <Modal setOpenModal={setModalOpen} modalContent={modalContent} />}

@@ -14,7 +14,8 @@ const Home = () => {
 
     const today = calculateToday();
 
-
+    document.title = 'Astronomy Picture of the Day'
+    
     return (
         <>
             <div className="container">
