@@ -6,11 +6,8 @@ import Picture from "../Picture";
 const Card = ({ date }) => {
   const [starData, setStarData] = useState({});
 
-  // TODO This is very cheesy, should be an easier way to point to the backend
-  let backendURL = `${window.location.protocol}//${window.location.hostname}:5000/`
+  const URL = `/api?date=${date}`
 
-  const URL = `${backendURL}api?date=${date}`
-  
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
@@ -18,12 +15,16 @@ const Card = ({ date }) => {
     setStarData({})
 
     async function fetchData() {
-      const res = await fetch(URL, {signal:signal})
-      const  data = await res.json()
+      const res = await fetch(URL, { signal: signal })
+      const data = await res.json()
       setStarData(data)
     }
-    
-    fetchData();
+
+    try {
+      fetchData();
+    } catch (err) {
+      console.error(err)
+    }
 
     return () => {
       // cancel the request before component unmounts
@@ -35,9 +36,9 @@ const Card = ({ date }) => {
   return (
     <div className="card">
       <p>
-        <FormatedDate date={date}/>
+        <FormatedDate date={date} />
       </p>
-      <Picture starData={starData} className={"mainPicture"}/>
+      <Picture starData={starData} className={"mainPicture"} />
       <h4>
         {starData.title}
       </h4>

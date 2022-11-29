@@ -11,12 +11,7 @@ const Gallery = () => {
     const [modalContent, setModalContent] = useState({});
 
     const numberOfCards = 20;
-
-    // TODO This is very cheesy, should be an easier way to point to the backend
-    let backendURL = `${window.location.protocol}//${window.location.hostname}:5000/`
-
-    const URL = `${backendURL}api?count=${numberOfCards}&thumbs=true`
-
+    const URL = `/api?count=${numberOfCards}&thumbs=true`
 
     useEffect(() => {
         const controller = new AbortController();
@@ -28,7 +23,11 @@ const Gallery = () => {
             setCards(data)
         }
 
-        fetchData();
+        try {
+            fetchData();
+        } catch (err) {
+            console.error(err)
+        }
 
         return () => {
             // cancel the request before component unmounts
