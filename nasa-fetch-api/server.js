@@ -18,9 +18,6 @@ const API_KEY_VALUE = process.env.REACT_APP_NASA_API_KEY_VALUE
 // Enable cors
 app.use(cors())
 
-// Initialize cache
-let cache = apiCache.middleware
-
 // Rate limiting, limits the requests for a given time
 const limiter = rateLimit({
     windowMS: 60 * 60 * 1000, // 1 hour
@@ -33,7 +30,7 @@ app.set('trust proxy', 1)
 app.use(express.static('public'))
 
 // Route to fetch the data for the main page
-app.get('/api', cache('2 minutes'),  async (req, res) => {
+app.get('/api',  async (req, res) => {
     try {
         const params = new URLSearchParams({
             [API_KEY_NAME]: API_KEY_VALUE,
