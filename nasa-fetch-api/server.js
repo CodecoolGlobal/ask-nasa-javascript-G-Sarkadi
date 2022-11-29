@@ -18,6 +18,14 @@ const API_KEY_VALUE = process.env.REACT_APP_NASA_API_KEY_VALUE
 // Enable cors
 app.use(cors())
 
+// Initialize cache
+let cache = apiCache.middleware
+
+/* Cache only if there is no 'count' url parameter, thus on the /gallery page on
+every refresh it will fetch a batch of new random pictures */
+const noCountParameter = (req, res) => !req.query.count
+const conditionalCache = cache('2 minutes', noCountParameter)
+
 // Rate limiting, limits the requests for a given time
 const limiter = rateLimit({
     windowMS: 60 * 60 * 1000, // 1 hour
@@ -30,7 +38,7 @@ app.set('trust proxy', 1)
 app.use(express.static('public'))
 
 // Route to fetch the data for the main page
-app.get('/api',  async (req, res) => {
+app.get('/api', conditionalCache, async (req, res) => {
     try {
         const params = new URLSearchParams({
             [API_KEY_NAME]: API_KEY_VALUE,
