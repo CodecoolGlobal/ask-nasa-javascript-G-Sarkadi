@@ -23,11 +23,8 @@ const Gallery = () => {
             setCards(data)
         }
 
-        try {
-            fetchData();
-        } catch (err) {
-            console.error(err)
-        }
+        fetchData()
+            .catch(console.error);
 
         return () => {
             // cancel the request before component unmounts
