@@ -69,7 +69,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
-    width: 80%;
+    width: 80vw;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 1%;
     row-gap: 1%;
