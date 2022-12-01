@@ -1,17 +1,15 @@
 const FormatedDate = ({ date }) => {
-    function formatDate(date) {
+    function formatDate() {
         let dateObject = new Date(date + "z");
         let options = {
-            year: "numeric",
             month: "long",
-            day: "numeric",
         }
-        return dateObject.toLocaleDateString("en-GB", options)
+        return dateObject.getFullYear() + " " +  dateObject.toLocaleDateString("en-GB", options) + " " + dateObject.getDay();
     }
 
     return (
         <>
-            {formatDate(date)}
+            {formatDate()}
         </>
     )
 }
