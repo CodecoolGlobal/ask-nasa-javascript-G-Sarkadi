@@ -17,7 +17,7 @@ const DateInput = ({ selectedDate, today, setSelectedDate }) => {
 
     return (
         <>
-            <label>Select date:</label>
+            <label>Select date: </label>
             <input type="date"
                 value={selectedDate ?? today}
                 max={correctToday()}
